@@ -1,11 +1,14 @@
 import './App.css';
+import { MovieSearch } from './MovieSearch';
+import { Navbar } from './Navbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      <h1>My Movie List</h1>
-      </header>
+      <Navbar />
+      <h1>Movie Search</h1>
+      <MovieSearch />
+
     </div>
   );
 }
