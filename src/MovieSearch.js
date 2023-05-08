@@ -3,10 +3,15 @@ import React, { useState } from 'react';
 export const MovieSearch = () => {
   const [keyword, setKeyword] = useState('');
   const [movies, setMovies] = useState([]);
+  const [saveMovies, setSaveMovies] = useState([]);
 
   const handleInputChange = (event) => {
     setKeyword(event.target.value);
   };
+
+  const handleSaveMovie = (movie) => {
+    setSaveMovies ([...saveMovies, movie]);
+  }
 
   const displayMovies = () => {
     return (
@@ -16,6 +21,7 @@ export const MovieSearch = () => {
             <img src={movie.Poster} alt="poster" />
             <p>{movie.Title}</p>
             <p>{movie.Plot}</p> {/* Add plot here */}
+            <button type = "button" onClick={handleSaveMovie}>Save</button>
           </li>
         ))}
       </ul>
