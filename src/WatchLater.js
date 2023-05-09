@@ -15,7 +15,7 @@ const MovieList = ({ movies }) => {
   );
 };
 
-export const MyMovies = () => {
+export const WatchLater = () => {
   const [savedMovies, setSavedMovies] = useState([]);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export const MyMovies = () => {
 
   return (
     <div>
-      <h1>Watch Next</h1>
+      <h1>Watch Later</h1>
       {savedMovies.length > 0 ? (
         <MovieList movies={savedMovies} />
       ) : (

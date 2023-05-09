@@ -1,15 +1,25 @@
-import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import './Navbar.css';
 
-const Navbar = () => {
+
+function BasicExample() {
   return (
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">Watch Next</a></li>
-        <li><a href="/contact">Binge Watch</a></li>
-      </ul>
-    </nav>
+    <Navbar className="custom-navbar" expand="lg">
+      <Container>
+        <Navbar.Brand href="/">Movie List 🎬</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/Watch-Next">Watch Next</Nav.Link>
+            <Nav.Link href="/Watch-Later">Watch Later</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export { Navbar };
+export default BasicExample;

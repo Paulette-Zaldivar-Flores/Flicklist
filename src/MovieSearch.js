@@ -52,6 +52,7 @@ export const MovieSearch = () => {
 
   return (
     <div>
+      <h1 className='App-header'>Movie Search</h1>
       <form>
         <input type="text" id="keyword" value={keyword} onChange={handleInputChange} />
         <button type="button" id="submit" onClick={fetchMovies}>Search</button>
