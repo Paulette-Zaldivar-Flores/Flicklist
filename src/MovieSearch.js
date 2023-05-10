@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const MovieSearch = () => {
+  const navigate = useNavigate();
   const [keyword, setKeyword] = useState('');
   const [movies, setMovies] = useState([]);
-  const [saveMovies, setSaveMovies] = useState([]);
+  const [saveMovies, setSavedMovies] = useState([]);
 
   const handleInputChange = (event) => {
     setKeyword(event.target.value);
   };
 
   const handleSaveMovie = (movie) => {
-    setSaveMovies ([...saveMovies, movie]);
-  }
+    setSavedMovies((prevSavedMovies) => [...prevSavedMovies, movie]);
+  };
 
   const displayMovies = () => {
     return (
@@ -21,7 +23,15 @@ export const MovieSearch = () => {
             <img src={movie.Poster} alt="poster" />
             <p>{movie.Title}</p>
             <p>{movie.Plot}</p> {/* Add plot here */}
-            <button type = "button" onClick={handleSaveMovie}>Save</button>
+            <button
+              type="button"
+              onClick={() => {
+                handleSaveMovie(movie);
+                navigate('/Watch-Next', { state: { savedMovies: [...saveMovies, movie] } });
+              }}
+            >
+              Save
+            </button>
           </li>
         ))}
       </ul>
@@ -49,6 +59,7 @@ export const MovieSearch = () => {
         });
       });
   };
+
 
   return (
     <div>

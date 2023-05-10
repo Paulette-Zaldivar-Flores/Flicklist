@@ -1,46 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './MyMovies.css';
-
-const MovieList = ({ movies }) => {
-  return (
-    <ul id="results">
-      {movies.map((movie) => (
-        <li key={movie.imdbID} className='list-inline-item'>
-          <img src={movie.Poster} alt="poster" />
-          <p>{movie.Title}</p>
-          <p>{movie.Plot}</p> {/* Add plot here */}
-        </li>
-      ))}
-    </ul>
-  );
-};
+import { useLocation } from 'react-router-dom';
 
 export const MyMovies = () => {
-  const [savedMovies, setSavedMovies] = useState([]);
-
-  useEffect(() => {
-    const storedMovies = localStorage.getItem('savedMovies');
-    if (storedMovies) {
-      setSavedMovies(JSON.parse(storedMovies));
-    }
-  }, []);
-
-  const handleSaveMovie = (movie) => {
-    setSavedMovies((prevState) => [...prevState, movie]);
-    localStorage.setItem('savedMovies', JSON.stringify([...savedMovies, movie]));
-  };
+  const location = useLocation();
+  const savedMovies = location.state?.savedMovies || [];
 
   return (
     <div>
-      <h1>Watch Next</h1>
-      {savedMovies.length > 0 ? (
-        <MovieList movies={savedMovies} />
-      ) : (
-        <p>You have not saved any movies yet.</p>
-      )}
-      <button onClick={() => handleSaveMovie({ Title: 'Movie Title', Poster: 'Movie Poster', Plot: 'Movie Plot' })}>
-        Save Movie
-      </button>
+      <h2>Saved Movies</h2>
+      <ul>
+        {savedMovies && savedMovies.map((movie) => (
+          <li key={movie.imdbID} className="movie-item">
+            <img src={movie.Poster} alt="poster" />
+            <div className="movie-details">
+              <h3>{movie.Title}</h3>
+              <p>{movie.Plot}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
