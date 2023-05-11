@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './MovieSearch.css';
 
 export const MovieSearch = () => {
   const navigate = useNavigate();
@@ -65,8 +66,8 @@ export const MovieSearch = () => {
     <div>
       <h1 className='App-header'>Movie Search</h1>
       <form>
-        <input type="text" id="keyword" value={keyword} onChange={handleInputChange} />
-        <button type="button" id="submit" onClick={fetchMovies}>Search</button>
+        <input className ="searchbar" type="text" id="keyword" value={keyword} onChange={handleInputChange} />
+        <button className = "searchbutton" type="button" id="submit" onClick={fetchMovies}>Search</button>
       </form>
       {movies.length > 0 && displayMovies()}
     </div>

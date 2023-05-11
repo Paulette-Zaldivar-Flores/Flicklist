@@ -1,0 +1,50 @@
+.App-header{
+  margin-top:50px;
+
+}
+.searchbar{
+  border-radius: 50px;
+  padding: 5px 10px;
+  border-color:rgb(91, 27, 160);
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4);
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+.searchbutton {
+  --green: #1BFD9C;
+  font-size: 15px;
+  padding: 10px 20px;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius:50px;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+
+.searchbutton:hover {
+  color: #82ffc9;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+.searchbutton:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+}
+
+.searchbutton:hover:before {
+  transform: translateX(15em);
+}
