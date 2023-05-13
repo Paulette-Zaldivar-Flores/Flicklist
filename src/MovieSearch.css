@@ -13,7 +13,7 @@
 }
 
 .searchbutton {
-  --green: #1BFD9C;
+  --green: #b9fd1b;
   font-size: 15px;
   padding: 10px 20px;
   letter-spacing: 0.06em;
@@ -26,12 +26,12 @@
   border: 2px solid var(--green);
   background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
   color: var(--green);
-  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+  box-shadow: inset 0 0 10px rgba(125, 253, 27, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
 }
 
 .searchbutton:hover {
-  color: #82ffc9;
-  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+  color: #d3ff82;
+  box-shadow: inset 0 0 10px rgba(212, 253, 27, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
 }
 
 .searchbutton:before {
@@ -42,7 +42,7 @@
   height: 100%;
   top: 0;
   transition: transform .4s ease-in-out;
-  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+  background: linear-gradient(to right, transparent 1%, rgba(185, 253, 27, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
 }
 
 .searchbutton:hover:before {

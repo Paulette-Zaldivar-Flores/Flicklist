@@ -1,21 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './MyMovies.css';
-import { useLocation } from 'react-router-dom';
 
 export const MyMovies = () => {
-  const location = useLocation();
-  const savedMovies = location.state?.savedMovies || [];
+  const [savedMovies, setSavedMovies] = useState([]);
+
+  useEffect(() => {
+    const storedMovies = JSON.parse(localStorage.getItem('savedMovies')) || [];
+    setSavedMovies(storedMovies);
+  }, []);
+
+  const handleRemoveMovie = (movieId) => {
+    const updatedMovies = savedMovies.filter(movie => movie.imdbID !== movieId);
+    setSavedMovies(updatedMovies);
+    localStorage.setItem('savedMovies', JSON.stringify(updatedMovies));
+  };
 
   return (
     <div>
       <h2>Saved Movies</h2>
       <ul>
-        {savedMovies && savedMovies.map((movie) => (
+        {savedMovies.map((movie) => (
           <li key={movie.imdbID} className="movie-item">
             <img src={movie.Poster} alt="poster" />
             <div className="movie-details">
               <h3>{movie.Title}</h3>
               <p>{movie.Plot}</p>
+              <button onClick={() => handleRemoveMovie(movie.imdbID)}>Remove</button>
             </div>
           </li>
         ))}

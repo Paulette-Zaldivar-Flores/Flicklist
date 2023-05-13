@@ -3,10 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Navbar.css';
 
-
 function BasicExample() {
   return (
-    <Navbar className="custom-navbar" expand="lg">
+    <Navbar className="custom-navbar" variant="light" expand="dark">
       <Container>
         <Navbar.Brand href="/">Movie List 🎬</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
