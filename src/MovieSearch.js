@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MovieSearch.css';
 
+
 export const MovieSearch = () => {
   const navigate = useNavigate();
   const [keyword, setKeyword] = useState('');
@@ -20,23 +21,38 @@ export const MovieSearch = () => {
 
   const displayMovies = () => {
     return (
-      <ul id="results">
-        {movies.map((movie) => (
-          <li key={movie.imdbID} className='list-inline-item'>
-            <img src={movie.Poster} alt="poster" />
-            <p>{movie.Title}</p>
-            <p>{movie.Plot}</p> {/* Add plot here */}
-            <button
-              type="button"
-              onClick={() => {
-                handleSaveMovie(movie);
-              }}
-            >
-              Save
-            </button>
-          </li>
-        ))}
-      </ul>
+      <div className="mt-3">
+        <ul id="results movie-card">
+          {movies.map((movie) => (
+            <li key={movie.imdbID} className="list-inline-item ">
+              <div className="row">
+                <div className="col-sm-6 col-md-6 col-lg-4 mt-3">
+                  <p className="movietitle">{movie.Title}</p>
+                  <div className="col-12 card" style={{ width: "15rem" }}>
+                    <img className="card-img-top" src={movie.Poster} alt="poster" />
+                    <div className="card-body">
+                      <div className="overlay">
+                        <div className="text">
+                          <p>{movie.Plot}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                  type="button"
+                  className = "savebutton"
+                  onClick={() => {
+                    handleSaveMovie(movie);
+                  }}
+                >
+                  Save
+                </button>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   };
 
@@ -76,4 +92,6 @@ export const MovieSearch = () => {
       {movies.length > 0 && displayMovies()}
     </div>
   );
+
+
 };

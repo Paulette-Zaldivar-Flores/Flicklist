@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Navbar.css';
 
-function BasicExample() {
+function MovieNavbar() {
   return (
     <Navbar className="custom-navbar" variant="light" expand="dark">
       <Container>
@@ -21,4 +21,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default MovieNavbar;
