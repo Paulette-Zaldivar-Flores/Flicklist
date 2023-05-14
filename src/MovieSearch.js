@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MovieSearch.css';
-
+import './Modal.css';
 
 export const MovieSearch = () => {
   const navigate = useNavigate();
   const [keyword, setKeyword] = useState('');
   const [movies, setMovies] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleInputChange = (event) => {
     setKeyword(event.target.value);
@@ -19,34 +21,46 @@ export const MovieSearch = () => {
     navigate('/Watch-Next', { state: { savedMovie: movie } });
   };
 
+  const openModal = (movie) => {
+    setSelectedMovie(movie);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   const displayMovies = () => {
+    const uniqueMovies = Array.from(new Set(movies.map((movie) => movie.imdbID)))
+      .map((imdbID) => {
+        return movies.find((movie) => movie.imdbID === imdbID);
+      });
+
     return (
       <div className="mt-3">
         <ul id="results movie-card">
-          {movies.map((movie) => (
+          {uniqueMovies.map((movie) => (
             <li key={movie.imdbID} className="list-inline-item ">
               <div className="row">
                 <div className="col-sm-6 col-md-6 col-lg-4 mt-3">
                   <p className="movietitle">{movie.Title}</p>
                   <div className="col-12 card" style={{ width: "15rem" }}>
-                    <img className="card-img-top" src={movie.Poster} alt="poster" />
-                    <div className="card-body">
-                      <div className="overlay">
-                        <div className="text">
-                          <p>{movie.Plot}</p>
-                        </div>
-                      </div>
-                    </div>
+                    <img
+                      className="card-img-top"
+                      src={movie.Poster}
+                      alt="poster"
+                      onClick={() => openModal(movie)}
+                    />
                   </div>
                   <button
-                  type="button"
-                  className = "savebutton"
-                  onClick={() => {
-                    handleSaveMovie(movie);
-                  }}
-                >
-                  Save
-                </button>
+                    type="button"
+                    className="savebutton"
+                    onClick={() => {
+                      handleSaveMovie(movie);
+                    }}
+                  >
+                    Save
+                  </button>
                 </div>
               </div>
             </li>
@@ -54,7 +68,10 @@ export const MovieSearch = () => {
         </ul>
       </div>
     );
-  };
+                  };
+
+
+
 
   const fetchMovies = async () => {
     const url = `https://www.omdbapi.com/?s=${keyword}&apikey=adf1f2d7`;
@@ -84,14 +101,38 @@ export const MovieSearch = () => {
 
   return (
     <div>
-      <h1 className='App-header'>Movie Search</h1>
+      <h1 className="App-header">Movie Search</h1>
       <form>
-        <input className="searchbar" type="text" id="keyword" value={keyword} onChange={handleInputChange} />
-        <button className="searchbutton" type="button" id="submit" onClick={fetchMovies}>Search</button>
+        <input
+          className="searchbar"
+          type="text"
+          id="keyword"
+          value={keyword}
+          onChange={handleInputChange}
+        />
+        <button
+          className="searchbutton"
+          type="button"
+          id="submit"
+          onClick={fetchMovies}
+        >
+          Search
+        </button>
       </form>
       {movies.length > 0 && displayMovies()}
+      {isModalOpen && selectedMovie && (
+  <div className="modal-overlay">
+    <div className="modal-content">
+      <span className="close" onClick={closeModal}>
+        &times;
+      </span>
+      <h2>{selectedMovie.Title}</h2>
+      <p>{selectedMovie.Plot}</p>
+    </div>
+  </div>
+)}
+
+
     </div>
   );
-
-
 };

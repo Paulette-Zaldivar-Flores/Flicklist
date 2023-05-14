@@ -1,3 +1,49 @@
-h1, p{
+h1, h2, p{
   color:aliceblue;
+}
+
+h1{
+  padding: 30px;
+}
+
+h2{
+  padding: 20px;
+}
+
+.removebutton{
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 10px 40px;
+  color: white;
+  background: #ad53ab;
+  background: linear-gradient(0deg, rgb(208, 54, 180) 0%, rgba(132,116,254,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #d0369abe;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+
+.removebutton:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #d5c1cabe;
+}
+
+.removebutton:active {
+  box-shadow: 0 0.3em 1em -0.5em #d036c3;
+}
+
+.card{
+  background-color:#504e50 !important;
+
+}
+.card-body{
+  background-color:#504e50;
+  color: #ffffff !important;
+  text-align: left;
+  font-size: 20px;
+  padding-top: 20px;
 }

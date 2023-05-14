@@ -17,19 +17,27 @@ export const MyMovies = () => {
 
   return (
     <div>
-      <h2>Saved Movies</h2>
-      <ul>
-        {savedMovies.map((movie) => (
-          <li key={movie.imdbID} className="movie-item">
-            <img src={movie.Poster} alt="poster" />
-            <div className="movie-details">
-              <h3>{movie.Title}</h3>
-              <p>{movie.Plot}</p>
-              <button onClick={() => handleRemoveMovie(movie.imdbID)}>Remove</button>
+      <h1>Saved Movies</h1>
+  {savedMovies.map((movie) => (
+    <li key={movie.imdbID} className="movie-item">
+      <div className="card mb-3">
+        <div className="row no-gutters">
+          <div className="col-md-4">
+            <img src={movie.Poster} className="card-img" alt="poster" />
+          </div>
+          <div className="col-md-8">
+            <div className="card-body">
+              <h5 className="card-title">{movie.Title}</h5>
+              <p className="card-text">{movie.Plot}</p>
+              <button className="removebutton" onClick={() => handleRemoveMovie(movie.imdbID)}>
+                Delete
+              </button>
             </div>
-          </li>
-        ))}
-      </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+  ))}
     </div>
   );
 };
