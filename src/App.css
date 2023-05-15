@@ -2,6 +2,7 @@
   text-align: center;
   min-height: 100vh;
   background-color: #101a2f;
+  overflow-y: hidden;
 }
 
 .App-header {
@@ -13,14 +14,7 @@
   color: white;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 0 10px;
-  }
+.container{
+  padding-left: 0;
+  padding-right: 0;
 }

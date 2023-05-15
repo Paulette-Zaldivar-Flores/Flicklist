@@ -101,6 +101,7 @@ export const MovieSearch = () => {
 
   return (
     <div>
+      <div className = "banner" >
       <h1 className="App-header">Movie Search</h1>
       <form>
         <input
@@ -119,6 +120,7 @@ export const MovieSearch = () => {
           Search
         </button>
       </form>
+      </div>
       {movies.length > 0 && displayMovies()}
       {isModalOpen && selectedMovie && (
   <div className="modal-overlay">
