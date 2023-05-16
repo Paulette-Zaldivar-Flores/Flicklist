@@ -38,13 +38,14 @@ export const MovieSearch = () => {
 
     return (
       <div className="mt-3">
-        <ul id="results movie-card">
+        <div id="results">
           {uniqueMovies.map((movie) => (
-            <li key={movie.imdbID} className="list-inline-item ">
-              <div className="row">
-                <div className="col-sm-6 col-md-6 col-lg-4 mt-3">
+            <div key={movie.imdbID} className="list-inline-item"  >
+
+              <div className="row" >
+                <div className="col-sm mt-3">
                   <p className="movietitle">{movie.Title}</p>
-                  <div className="col-12 card" style={{ width: "15rem" }}>
+                  <div className="card">
                     <img
                       className="card-img-top"
                       src={movie.Poster}
@@ -63,9 +64,10 @@ export const MovieSearch = () => {
                   </button>
                 </div>
               </div>
-            </li>
+            </div>
+
           ))}
-        </ul>
+        </div>
       </div>
     );
                   };
