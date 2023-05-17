@@ -3,11 +3,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Navbar.css';
 
+
 function MovieNavbar() {
   return (
     <Navbar className="custom-navbar" variant="light" expand="dark">
       <Container>
-        <Navbar.Brand href="/">Movie List 🎬</Navbar.Brand>
+        <Navbar.Brand href="/"><img
+              src="./images/logo.png"
+              alt = "logo"
+            /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

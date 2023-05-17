@@ -45,9 +45,9 @@ export const MovieSearch = () => {
               <div className="row" >
                 <div className="col-sm mt-3">
                   <p className="movietitle">{movie.Title}</p>
-                  <div className="card">
+                  <div>
                     <img
-                      className="card-img-top"
+                      className="movieposter"
                       src={movie.Poster}
                       alt="poster"
                       onClick={() => openModal(movie)}

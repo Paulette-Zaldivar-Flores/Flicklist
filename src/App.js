@@ -10,13 +10,13 @@ function App() {
   return (
   <div className="App">
     <Navbar/>
-    <div className = "container-fluid">
+
       <Routes>
         <Route path="/" element={<MovieSearch/>}/>
         <Route path="/Watch-Next" element={<MyMovies/>}/>
         <Route path="/Watch-Later" element={<WatchLater/>}/>
       </Routes>
-    </div>
+
   </div>
   );
 }
