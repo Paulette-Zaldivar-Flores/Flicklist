@@ -44,7 +44,7 @@ export const MovieSearch = () => {
 
               <div className="row" >
                 <div className="col-sm mt-3">
-                  <p className="movietitle">{movie.Title}</p>
+
                   <div>
                     <img
                       className="movieposter"
@@ -53,6 +53,7 @@ export const MovieSearch = () => {
                       onClick={() => openModal(movie)}
                     />
                   </div>
+                  <p className="movietitle">{movie.Title}</p>
                   <button
                     type="button"
                     className="savebutton"
@@ -104,7 +105,7 @@ export const MovieSearch = () => {
   return (
     <div>
       <div className = "banner" >
-      <h1 className="App-header">Movie Search</h1>
+      <h1 className="App-header">Flick Search</h1>
       <form>
         <input
           className="searchbar"
@@ -112,6 +113,7 @@ export const MovieSearch = () => {
           id="keyword"
           value={keyword}
           onChange={handleInputChange}
+          placeholder="Search for a movie..."
         />
         <button
           className="searchbutton"

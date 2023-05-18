@@ -1,2 +1,12 @@
-.custom-navbar{background-color:  #6ef52a;
+.logo{
+  width: 60px;
+  border: 2px solid #ff00fb ;
+}
+
+.custom-navbar{
+  background-color:  #6ef52a;
+}
+
+.navlink:hover{
+  color:#ff00fb !important
 }

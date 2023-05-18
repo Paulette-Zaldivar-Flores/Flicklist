@@ -48,6 +48,7 @@
 .savebutton{
   margin: 0;
   margin-top: 20px;
+  margin-bottom: 20px;
   font-family: inherit;
   font-weight: 500;
   font-size: 17px;
@@ -84,4 +85,5 @@
 
 .movieposter{
   border-radius: 5px;
+  margin-bottom: 20px;
 }

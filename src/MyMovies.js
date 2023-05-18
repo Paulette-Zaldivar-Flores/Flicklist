@@ -25,7 +25,9 @@ export const MyMovies = () => {
         <ul>
           {savedMovies.map((movie) => (
             <li key={movie.imdbID} className="movie-item">
-              <div className="card mb-3">
+              <div className="container d-flex justify-content-center p-3">
+
+              <div className="card mymoviescard mb-3" >
                 <div className="row no-gutters">
                   <div className="col-md-4">
                     <img src={movie.Poster} className="card-img" alt="poster" />
@@ -41,6 +43,8 @@ export const MyMovies = () => {
                   </div>
                 </div>
               </div>
+              </div>
+
             </li>
           ))}
         </ul>
