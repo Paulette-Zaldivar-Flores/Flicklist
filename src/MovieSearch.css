@@ -63,11 +63,12 @@
 }
 
 .savebutton:hover {
-  box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be;
+  box-shadow: 0 0.5em 1.5em -0.5em #2704ee;
+  background: linear-gradient(0deg, rgb(77, 46, 250) 0%, rgb(82, 65, 208) 100%);
 }
 
 .savebutton:active {
-  box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+  box-shadow: 0 0.3em 1em -0.5em #2701fb;
 }
 
 .banner {
@@ -81,9 +82,12 @@
 
 .movietitle{
   text-align: center;
+  word-wrap: break-word; /* Allow the title to wrap if it exceeds the container width */
 }
 
 .movieposter{
   border-radius: 5px;
   margin-bottom: 20px;
+
+
 }

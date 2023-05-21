@@ -38,14 +38,14 @@ export const MovieSearch = () => {
 
     return (
       <div className="mt-3">
-        <div id="results">
+        <div id="results container d-flex">
           {uniqueMovies.map((movie) => (
             <div key={movie.imdbID} className="list-inline-item"  >
 
               <div className="row" >
                 <div className="col-sm mt-3">
 
-                  <div>
+                  <div className = "movie">
                     <img
                       className="movieposter"
                       src={movie.Poster}
