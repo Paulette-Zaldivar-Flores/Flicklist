@@ -5,12 +5,13 @@ import Navbar from './Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom';
 import { WatchLater } from './WatchLater';
+import SignIn from './components/auth/signin'
 
 function App() {
   return (
   <div className="App">
     <Navbar/>
-
+<SignIn/>
       <Routes>
         <Route path="/" element={<MovieSearch/>}/>
         <Route path="/Watch-Next" element={<MyMovies/>}/>
