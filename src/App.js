@@ -6,12 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom';
 import { WatchLater } from './WatchLater';
 import SignIn from './components/auth/signin'
+import SignUp from './components/auth/signup';
+import AuthDetails from './components/auth/AuthDetails';
 
 function App() {
   return (
   <div className="App">
     <Navbar/>
-<SignIn/>
+      <SignIn/>
+      <SignUp/>
+      <AuthDetails/>
       <Routes>
         <Route path="/" element={<MovieSearch/>}/>
         <Route path="/Watch-Next" element={<MyMovies/>}/>
