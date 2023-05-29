@@ -1,0 +1,160 @@
+.signinbutton {
+  --color: #6EF52A;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color .5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #312f2f;
+}
+
+.signinbutton:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.signinbutton:hover {
+  color: #fff;
+}
+
+.signinbutton:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+}
+
+.signinbutton:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.singinbutton:active:before {
+  background: #6EF52A;
+  transition: background 0s;
+}
+
+
+.signupbutton {
+  --color: #f00df4;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color .5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+.signupbutton:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.signupbutton:hover {
+  color: #fff;
+}
+
+.signupbutton:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+}
+
+.signupbutton:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.singupbutton:active:before {
+  background: #a00ca3;
+  transition: background 0s;
+}
+
+.input {
+  --input-focus: #383937;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #e82af5;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.input:focus {
+  border: 1px solid var(--input-focus);
+}
+
+.signininput {
+  --input-focus: #383937;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #6EF52A;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.signininput::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.signininput:focus {
+  border: 1px solid var(--input-focus);
+}
+
+.loginlogo{
+  width: 120px;
+  border: 2px solid #ff00fb ;
+
+}
