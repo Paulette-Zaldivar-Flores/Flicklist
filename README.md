@@ -1,3 +1,6 @@
+# Flicklist a movie app that allows tou save your faborite movies and add views of movies watched 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
