@@ -1,5 +1,5 @@
-# FlickList 🏼🎬
-> A movie app that allows you search, save and rate movies tou have watched. 
+# FlickList 🎬
+> A movie app that allows you search, save and rate movies you have watched. 
 > Live demo [_here_](https://flickster.netlify.app/). 
 
 
