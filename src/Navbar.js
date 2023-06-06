@@ -20,7 +20,6 @@ function MovieNavbar() {
           <Nav className="me-auto">
             <Nav.Link className = "navlink" href="/">Home</Nav.Link>
             <Nav.Link className = "navlink" href="/Watch-Next">Watch Next</Nav.Link>
-            <Nav.Link className = "navlink" href="/Watch-Later">Watch Later</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
