@@ -1,3 +1,94 @@
+# FlickList 🎬
+> A movie app that allows you search, save and rate movies you have watched. 
+> Live demo [_here_](https://flickster.netlify.app/). 
+
+
+
+
+## Table of Contents
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+* [Contact](#contact)
+
+
+## General Information
+<ul><li>The goal of this project was to develop an app for myself since I enjoy watching movies. I also wanted to learn how to integrate firebase and react-router. </li></ul>
+
+
+## Technologies Used
+
+## Languages
+<ul>
+  <li>Javascript ES6</li>
+  <li>HTML5</li>
+  <li>CSS3</li></ul>
+  
+  ## Frameworks
+<ul>
+<li>React</li>
+<li>Media Queries</li>
+  <li>Bootstrap</li>
+  </ul>
+  
+  
+## Database
+<ul><li>Firebase</li></ul>
+
+
+
+
+## Other Tools
+<ul>
+<li>Firebase</li>
+</ul>
+
+
+## Features
+<ul>
+  <li>Search for a movie</li>
+  <li>Save a movie to wish list</li>
+  <li>Delete your saved movie from wish list</li>
+  <li>Review movvies that you have watched</li></ul>
+
+
+
+## Screenshots
+
+
+<img width="1436" alt="Screen Shot 2566-06-06 at 16 18 47" src="https://github.com/Paulette-Zaldivar-Flores/flicklist/assets/96970580/c3623b8b-9d3e-482b-abbd-7ba4305b9594">
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Project Status
+<ul>
+<li>Project is: in progress</li></ul>
+
+
+## Room for Improvement
+
+To do:
+<ul>
+  <li>Make responsive</li><ul>
+
+
+## Contact
+Created by [Paulette](https://paulette-zaldivar-flores.netlify.app/) - feel free to contact me!
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -14,57 +105,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
