@@ -82,7 +82,8 @@
 
 To do:
 <ul>
-  <li>Make responsive</li><ul>
+  <li>Make responsive</li>
+   <li>Integrate reviews feature</li><ul>
 
 
 ## Contact
