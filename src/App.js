@@ -9,6 +9,7 @@ import SignIn from './components/auth/signin';
 import SignUp from './components/auth/signup';
 import AuthDetails from './components/auth/AuthDetails';
 
+
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -22,23 +23,22 @@ function App() {
     setIsAuthenticated(false);
   };
 
-
   return (
     <div className="App">
       <Navbar isAuthenticated={isAuthenticated} onSignOut={handleSignOut} />
-      {isAuthenticated ? null : (
+      {!isAuthenticated && (
         <>
           <SignIn onSignIn={handleSignIn} />
           <SignUp />
         </>
       )}
-      <AuthDetails onSignIn={handleSignIn} isAuthenticated={isAuthenticated} />
       {isAuthenticated && (
         <Routes>
           <Route path="/" element={<MovieSearch />} />
           <Route path="/Watch-Next" element={<MyMovies />} />
         </Routes>
       )}
+      <AuthDetails onSignIn={handleSignIn} isAuthenticated={isAuthenticated} />
     </div>
   );
 }
