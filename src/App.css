@@ -20,3 +20,23 @@
   padding-left: 0;
   padding-right: 0;
 }
+
+.signOut{
+    cursor: pointer;
+    position: relative;
+    padding: 5px 10px;
+    font-size: 18px;
+    color: #212121;
+    border: 2px solid rgb(235, 67, 215);
+    border-radius: 10px;
+    background-color:rgb(240, 9, 209);
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+
+  .signOut:hover {
+    color: rgb(240, 9, 186);
+    box-shadow: 0 0px 20px rgba(193, 125, 98, 0.4);
+    background-color:transparent;
+  }

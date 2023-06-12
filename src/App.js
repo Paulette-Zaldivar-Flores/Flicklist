@@ -1,43 +1,54 @@
 import './App.css';
-import { useState } from 'react';
-import { MovieSearch } from './MovieSearch';
-import { MyMovies } from './MyMovies';
+import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Routes, Route } from 'react-router-dom';
 import SignIn from './components/auth/signin';
 import SignUp from './components/auth/signup';
 import AuthDetails from './components/auth/AuthDetails';
-
+import { MovieSearch } from './MovieSearch';
+import { MyMovies } from './MyMovies';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
 
   const handleSignIn = () => {
-    // Logic to handle successful sign-in
     setIsAuthenticated(true);
   };
 
   const handleSignOut = () => {
-    // Logic to handle sign-out
     setIsAuthenticated(false);
   };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, [location]);
 
   return (
     <div className="App">
       <Navbar isAuthenticated={isAuthenticated} onSignOut={handleSignOut} />
-      {!isAuthenticated && (
+      {!isLoading && (
         <>
-          <SignIn onSignIn={handleSignIn} />
-          <SignUp />
+          {!isAuthenticated ? (
+            <>
+              <SignIn onSignIn={handleSignIn} />
+              <SignUp />
+            </>
+          ) : (
+            <Routes>
+              <Route path="/" element={<MovieSearch />} />
+              <Route path="/Watch-Next" element={<MyMovies />} />
+            </Routes>
+          )}
         </>
       )}
-      {isAuthenticated && (
-        <Routes>
-          <Route path="/" element={<MovieSearch />} />
-          <Route path="/Watch-Next" element={<MyMovies />} />
-        </Routes>
-      )}
+      <br/>
       <AuthDetails onSignIn={handleSignIn} isAuthenticated={isAuthenticated} />
     </div>
   );

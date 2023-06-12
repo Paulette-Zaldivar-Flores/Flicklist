@@ -2,8 +2,10 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { auth } from '../../firebase';
 
+
 const AuthDetails = ({ onSignIn, isAuthenticated }) => {
   const [authUser, setAuthUser] = useState(null);
+
 
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
@@ -24,6 +26,7 @@ const AuthDetails = ({ onSignIn, isAuthenticated }) => {
     signOut(auth)
       .then(() => {
         console.log('Signed out');
+        window.location.href = '/';
       })
       .catch((error) => console.log(error));
   };
@@ -33,7 +36,7 @@ const AuthDetails = ({ onSignIn, isAuthenticated }) => {
       {authUser ? (
         <p>
           {`Signed In as ${authUser.email} `}
-          <button onClick={userSignOut}>Sign Out</button>
+          <button className = "signOut" onClick={userSignOut}>Sign Out</button>
         </p>
       ) : (
         <p>Signed Out</p>
