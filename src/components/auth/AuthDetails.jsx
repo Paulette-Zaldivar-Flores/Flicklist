@@ -36,13 +36,11 @@ const AuthDetails = ({ onSignIn, isAuthenticated }) => {
       {authUser ? (
         <p>
           {`Signed In as ${authUser.email} `}
-          <button className = "signOut" onClick={userSignOut}>Sign Out</button>
+          <button className="signOut" onClick={userSignOut}>Sign Out</button>
         </p>
-      ) : (
-        <p>Signed Out</p>
-      )}
+      ) : null}
     </div>
   );
-};
+}
 
 export default AuthDetails;
