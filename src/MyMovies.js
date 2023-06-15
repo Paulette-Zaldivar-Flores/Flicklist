@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './MyMovies.css';
+import Comments from './components/auth/comments';
 
 export const MyMovies = () => {
   const [savedMovies, setSavedMovies] = useState([]);
@@ -49,6 +50,8 @@ export const MyMovies = () => {
           ))}
         </ul>
       )}
+      <Comments/>
     </div>
+
   );
 };
