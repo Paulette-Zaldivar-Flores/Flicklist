@@ -1,5 +1,5 @@
 # FlickList 🎬
-> A movie app that allows you search, save and rate movies you have watched. 
+> A movie app that allows you search, save and comment on movies you have watched. 
 > Live demo [_here_](https://flickster.netlify.app/). 
 
 
@@ -24,12 +24,13 @@
 ## Languages
 <ul>
   <li>Javascript ES6</li>
+  <li>JSX</li>
   <li>HTML5</li>
   <li>CSS3</li></ul>
   
   ## Frameworks
 <ul>
-<li>React</li>
+<li>ReactJS (Custom Hooks, Components, useState, useEffect, React Router)</li>
 <li>Media Queries</li>
   <li>Bootstrap</li>
   </ul>
@@ -43,16 +44,17 @@
 
 ## Other Tools
 <ul>
-<li>Firebase</li>
+<li>Firebase (Auth, FireStore, Storage)</li>
 </ul>
 
 
 ## Features
 <ul>
-  <li>Search for a movie</li>
-  <li>Save a movie to wish list</li>
-  <li>Delete your saved movie from wish list</li>
-  <li>Review movvies that you have watched</li></ul>
+  <li>Users can Login and Register accounts</li>
+  <li>Users can search for a movie</li>
+  <li>Users can save a movie and delete a saved movie from their watch list</li>
+  <li>Users can comment and delete comments in movie details page</li></ul>
+
 
 
 
