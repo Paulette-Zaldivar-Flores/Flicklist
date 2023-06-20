@@ -18,10 +18,12 @@ function CreateComment() {
     };
 
     // Save the new comment to the database
-    set(comment); // Reset the comment input field to empty
+    set(newCommentRef, newComment);
+
+    // Reset the comment state variable
     setComment("");
 
-    return newCommentRef.set(newComment);
+    return newCommentRef;
   };
 
   return (
@@ -32,4 +34,4 @@ function CreateComment() {
   );
 }
 
-export default CreateComment
+export default CreateComment;
