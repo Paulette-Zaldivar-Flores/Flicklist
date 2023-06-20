@@ -16,7 +16,7 @@
 
 
 ## General Information
-<ul><li>The goal of this project was to develop an app for myself since I enjoy watching movies. I also wanted to learn how to integrate firebase and react-router. </li></ul>
+<ul><li>The goal of this project was to develop an app to learn how to integrate firebase and react-router. </li></ul>
 
 
 ## Technologies Used
