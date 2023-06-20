@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { getDatabase, ref, push, set } from 'firebase/database';
+import './comments.css';
 
 function Comments({ movieId, comments }) {
   const [comment, setComment] = useState("");
@@ -25,10 +26,12 @@ function Comments({ movieId, comments }) {
   return (
     <div>
       <div>
-        <textarea value={comment} onChange={(e) => setComment(e.target.value)}></textarea>
-        <button onClick={createComment}>Create Comment</button>
-      </div>
-      <div>
+        <input className = "commentsinput" value={comment} onChange={(e) => setComment(e.target.value)}></input>
+        <button className = "commentsbutton ms-3" onClick={createComment}><span className="commentsbutton_top"> Button
+          </span>
+          </button>
+          </div>
+          <div>
         <h4>Comments:</h4>
         {comments && Object.values(comments).map((comment) => (
           <p key={comment.createdAt}>{comment.content}</p>
