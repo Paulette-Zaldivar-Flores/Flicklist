@@ -1,14 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import './MyMovies.css';
 import Comments from './components/auth/comments';
+import { getDatabase, ref, onChildAdded } from 'firebase/database';
 
 export const MyMovies = () => {
   const [savedMovies, setSavedMovies] = useState([]);
+  const [movieComments, setMovieComments] = useState({});
 
   useEffect(() => {
+    const database = getDatabase();
+    const commentsRef = ref(database, 'comments');
+
+    onChildAdded(commentsRef, (snapshot) => {
+      const movieId = snapshot.key;
+      const comments = snapshot.val();
+
+      setMovieComments((prevComments) => ({
+        ...prevComments,
+        [movieId]: comments,
+      }));
+    });
+
     const storedMovies = JSON.parse(localStorage.getItem('savedMovies')) || [];
     setSavedMovies(storedMovies);
   }, []);
+
 
   const handleRemoveMovie = (movieId) => {
     const updatedMovies = savedMovies.filter(movie => movie.imdbID !== movieId);
@@ -45,12 +61,11 @@ export const MyMovies = () => {
                 </div>
               </div>
               </div>
-
+              <Comments movieId={movie.imdbID} comments={movieComments[movie.imdbID]} />
             </li>
           ))}
         </ul>
       )}
-      <Comments/>
     </div>
 
   );
