@@ -56,12 +56,13 @@ export const MyMovies = () => {
                       <button className="removebutton" onClick={() => handleRemoveMovie(movie.imdbID)}>
                         Delete
                       </button>
+                      <Comments movieId={movie.imdbID} comments={movieComments[movie.imdbID]} />
                     </div>
                   </div>
                 </div>
               </div>
               </div>
-              <Comments movieId={movie.imdbID} comments={movieComments[movie.imdbID]} />
+
             </li>
           ))}
         </ul>

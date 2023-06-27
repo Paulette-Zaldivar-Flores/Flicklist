@@ -26,13 +26,12 @@ function Comments({ movieId, comments }) {
   return (
     <div>
       <div>
-        <input className = "commentsinput" value={comment} onChange={(e) => setComment(e.target.value)}></input>
-        <button className = "commentsbutton ms-3" onClick={createComment}><span className="commentsbutton_top"> Button
-          </span>
+      <button className = "commentsbutton" onClick={createComment}> Add A Comment
           </button>
+          <input className = "commentsinput mx-5" value={comment} onChange={(e) => setComment(e.target.value)}></input>
           </div>
           <div>
-        <h4>Comments:</h4>
+        <h5>Comments:</h5>
         {comments && Object.values(comments).map((comment) => (
           <p key={comment.createdAt}>{comment.content}</p>
         ))}
