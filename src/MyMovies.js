@@ -47,7 +47,10 @@ export const MyMovies = () => {
               <div className="card mymoviescard mb-3" >
                 <div className="row no-gutters">
                   <div className="col-md-4">
-                    <img src={movie.Poster} className="card-img" alt="poster" />
+                    <img src={movie.Poster}
+                  className="card-img"
+                  alt="poster"
+                  style={{ objectFit: "cover", height: "100%" }} />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
