@@ -10,3 +10,9 @@
 .navlink:hover{
   color:#ff00fb !important
 }
+
+.avatar{
+  width: 60px;
+  border: 2px solid #ff00fb;
+  border-radius: 30px;
+}
