@@ -5,11 +5,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Navbar.css';
 import logo from './images/logo.png';
-import avatar from './images/avatar.png'
+import avatar from './images/avatar.png';
 
-
-const MovieNavbar = ({ current_user, userSignOut }) => {
-  const isLoggedIn = current_user !== null;
+const MovieNavbar = ({ isAuthenticated, userSignOut }) => {
 
   return (
     <Navbar className="custom-navbar me-auto" variant="light" expand="lg">
@@ -23,10 +21,10 @@ const MovieNavbar = ({ current_user, userSignOut }) => {
             <Nav.Link className="navlink" href="/">Home</Nav.Link>
             <Nav.Link className="navlink" href="/Watch-Next">Watch Next</Nav.Link>
           </Nav>
-          {isLoggedIn && (
+          {isAuthenticated && (
             <Nav>
               <NavDropdown title={<img src={avatar} alt="Avatar" className="avatar" />} id="nav-dropdown">
-                <NavDropdown.Item onClick={userSignOut} href={`user_path(${current_user})`}>Log Out</NavDropdown.Item>
+                <NavDropdown.Item onClick={userSignOut}>Log Out</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           )}
