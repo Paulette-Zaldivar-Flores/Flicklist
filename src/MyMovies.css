@@ -19,17 +19,17 @@ h2{
   font-size: 17px;
   padding: 10px 40px;
   color: white;
-  background: #ad53ab;
-  background: linear-gradient(0deg, rgb(208, 54, 180) 0%, rgba(132,116,254,1) 100%);
+  background: linear-gradient(107.2deg, rgb(150, 15, 15) 10.6%, rgb(247, 0, 0) 91.1%);
   border: none;
-  box-shadow: 0 0.7em 1.5em -0.5em #d0369abe;
+  box-shadow: 0 0.5em 1.5em -0.5em #d5c1cabe;
   letter-spacing: 0.05em;
   border-radius: 20em;
 }
 
 
 .removebutton:hover {
-  box-shadow: 0 0.5em 1.5em -0.5em #d5c1cabe;
+
+  background: #d03636;
 }
 
 .removebutton:active {

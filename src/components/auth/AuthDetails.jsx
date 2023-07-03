@@ -3,9 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { auth } from '../../firebase';
 
 
-const AuthDetails = ({ onSignIn, isAuthenticated }) => {
+const AuthDetails = ({ onSignIn }) => {
   const [authUser, setAuthUser] = useState(null);
-
 
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
@@ -41,6 +40,6 @@ const AuthDetails = ({ onSignIn, isAuthenticated }) => {
       ) : null}
     </div>
   );
-}
+};
 
 export default AuthDetails;

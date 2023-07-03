@@ -9,6 +9,8 @@ import avatar from './images/avatar.png';
 
 const MovieNavbar = ({ isAuthenticated, userSignOut }) => {
 
+
+
   return (
     <Navbar className="custom-navbar me-auto" variant="light" expand="lg">
       <Container>

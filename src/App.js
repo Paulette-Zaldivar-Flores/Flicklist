@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar isAuthenticated={isAuthenticated} handleSignOut ={() => setIsAuthenticated(false)} />
+      <Navbar isAuthenticated={isAuthenticated} userSignOut={handleSignOut} />
       {!isLoading && (
         <>
           {!isAuthenticated ? (
