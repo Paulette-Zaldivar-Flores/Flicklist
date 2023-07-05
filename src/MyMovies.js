@@ -57,7 +57,7 @@ export const MyMovies = () => {
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h5 className="card-title">{movie.Title}</h5>
+                      <h5 className="card-title movieTitle">{movie.Title}</h5>
                       <p className="card-text">{movie.Plot}</p>
                       <Comments movieId={movie.imdbID} comments={movieComments[movie.imdbID]} />
                       <button className="removebutton" onClick={() => handleRemoveMovie(movie.imdbID)}>

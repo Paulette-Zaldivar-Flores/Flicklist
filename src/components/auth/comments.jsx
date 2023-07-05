@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { getDatabase, ref, push, set } from 'firebase/database';
 import './comments.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faComments } from '@fortawesome/free-solid-svg-icons';
 
 function Comments({ movieId, comments }) {
   const [comment, setComment] = useState("");
@@ -26,12 +28,12 @@ function Comments({ movieId, comments }) {
   return (
     <div>
       <div>
-      <button className = "commentsbutton" onClick={createComment}> Add A Comment
+      <button className = "commentsbutton" onClick={createComment}> Comment <FontAwesomeIcon icon={faComments} />
           </button>
           <input className = "commentsinput mx-5" value={comment} onChange={(e) => setComment(e.target.value)}></input>
           </div>
           <div>
-        <h5>Comments:</h5>
+        <h5 className = "commentsLabel">Comments:</h5>
         {comments && Object.values(comments).map((comment) => (
           <p key={comment.createdAt}>{comment.content}</p>
         ))}
