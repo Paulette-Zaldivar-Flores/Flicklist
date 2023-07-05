@@ -11,19 +11,17 @@ h2{
 }
 
 .removebutton{
-  margin: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-family: inherit;
-  font-weight: 500;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
   font-size: 17px;
-  padding: 10px 40px;
+  padding: 5px 10px;
   color: white;
   background: linear-gradient(107.2deg, rgb(150, 15, 15) 10.6%, rgb(247, 0, 0) 91.1%);
   border: none;
   box-shadow: 0 0.5em 1.5em -0.5em #d5c1cabe;
-  letter-spacing: 0.05em;
-  border-radius: 20em;
+  border-radius: 3px;
+
 }
 
 

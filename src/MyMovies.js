@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './MyMovies.css';
 import Comments from './components/auth/comments';
 import { getDatabase, ref, onChildAdded } from 'firebase/database';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+
 
 export const MyMovies = () => {
   const [savedMovies, setSavedMovies] = useState([]);
@@ -56,10 +59,10 @@ export const MyMovies = () => {
                     <div className="card-body">
                       <h5 className="card-title">{movie.Title}</h5>
                       <p className="card-text">{movie.Plot}</p>
-                      <button className="removebutton" onClick={() => handleRemoveMovie(movie.imdbID)}>
-                        Delete
-                      </button>
                       <Comments movieId={movie.imdbID} comments={movieComments[movie.imdbID]} />
+                      <button className="removebutton" onClick={() => handleRemoveMovie(movie.imdbID)}>
+                      <FontAwesomeIcon icon={faTrashCan} />
+                      </button>
                     </div>
                   </div>
                 </div>
