@@ -47,7 +47,6 @@
 
 .savebutton{
   margin: 0;
-  margin-top: 20px;
   margin-bottom: 20px;
   font-family: inherit;
   font-weight: 500;
@@ -81,13 +80,19 @@
 }
 
 .movietitle{
-  text-align: center;
-  word-wrap: break-word; /* Allow the title to wrap if it exceeds the container width */
+  width: 200px; /* Adjust the width to your preference */
+  word-wrap: break-word;
 }
 
 .movieposter{
   border-radius: 5px;
   margin-bottom: 20px;
+  width: 250px;
+  height: calc(200px * (16/9));
+}
 
-
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -38,7 +38,7 @@ export const MovieSearch = () => {
 
     return (
       <div className="mt-3">
-        <div id="results container d-flex">
+        <div id="results container-sm d-flex p-3">
           {uniqueMovies.map((movie) => (
             <div key={movie.imdbID} className="list-inline-item"  >
 
@@ -53,7 +53,9 @@ export const MovieSearch = () => {
                       onClick={() => openModal(movie)}
                     />
                   </div>
+                  <div className="flexbox">
                   <p className="movietitle">{movie.Title}</p>
+                  </div>
                   <button
                     type="button"
                     className="savebutton"
@@ -63,6 +65,7 @@ export const MovieSearch = () => {
                   >
                     Save
                   </button>
+
                 </div>
               </div>
             </div>

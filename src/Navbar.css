@@ -4,11 +4,17 @@
 }
 
 .custom-navbar{
-  background-color:  #6ef52a;
+background-color:#101A2F;
+overflow: hidden;
+border-bottom: 2px solid #adff2f;
 }
 
 .navlink:hover{
-  color:#ff00fb !important
+  color:#adff2f !important;
+}
+
+.navlink{
+  color:#ff00fb !important;
 }
 
 .avatar{
