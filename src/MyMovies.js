@@ -33,14 +33,19 @@ export const MyMovies = () => {
     const updatedMovies = savedMovies.filter(movie => movie.imdbID !== movieId);
     setSavedMovies(updatedMovies);
     localStorage.setItem('savedMovies', JSON.stringify(updatedMovies));
-    alert('Are you sure?');
+    alert('Delete?');
   };
+
+
+
+
 
   return (
     <div>
       <h1>Saved Movies</h1>
       {savedMovies.length === 0 ? (
-        <p>You haven't saved any movies yet</p>
+        <p>You haven't saved any movies yet 🎬 </p>
+
       ) : (
         <ul>
           {savedMovies.map((movie) => (

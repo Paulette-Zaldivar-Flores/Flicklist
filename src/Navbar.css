@@ -5,17 +5,41 @@
 
 .custom-navbar{
 background-color:#101A2F;
-overflow: hidden;
 border-bottom: 2px solid #adff2f;
 }
 
-.navlink:hover{
+.navlink{
   color:#adff2f !important;
 }
 
-.navlink{
+.navlink:hover{
   color:#ff00fb !important;
 }
+
+#nav-dropdown{
+  color: #adff2f;
+}
+
+#nav-dropdown:hover{
+  color: #ff00fb;
+}
+
+a.dropdown-item {
+  color: #adff2f;
+}
+
+a.dropdown-item:hover {
+  color: #ff00fb;
+  background-color: #101A2F;
+}
+
+.dropdown-menu.show{
+  background-color: #101A2F;
+  border: 1px solid #adff2f;
+  min-width: 50px !important;
+}
+
+
 
 .avatar{
   width: 60px;
