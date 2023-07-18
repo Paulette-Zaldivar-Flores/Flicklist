@@ -156,5 +156,19 @@
 .loginlogo{
   width: 120px;
   border: 2px solid #ff00fb ;
+}
 
+.signOut{
+  cursor: pointer;
+  position: relative;
+  padding: 5px 10px;
+  font-size: 18px;
+  color:#cac8c8;
+  background-color: #101A2F;
+  border: 1px solid #adff2f;
+  border-radius: 5px;
+}
+
+.signOut:hover {
+  background-color: #232f4a;
 }

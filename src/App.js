@@ -44,9 +44,11 @@ function App() {
             <Routes>
               <Route path="/" element={<MovieSearch />} />
               <Route path="/Watch-Next" element={<MyMovies />} />
+
             </Routes>
           )}
         </>
+
       )}
       <br/>
       <AuthDetails onSignIn={handleSignIn} isAuthenticated={isAuthenticated} />
