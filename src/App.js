@@ -32,7 +32,6 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar isAuthenticated={isAuthenticated} userSignOut={handleSignOut} />
       {!isLoading && (
         <>
           {!isAuthenticated ? (
@@ -41,16 +40,17 @@ function App() {
               <SignUp />
             </>
           ) : (
-            <Routes>
-              <Route path="/" element={<MovieSearch />} />
-              <Route path="/Watch-Next" element={<MyMovies />} />
-
-            </Routes>
+            <>
+              <Navbar isAuthenticated={isAuthenticated} userSignOut={handleSignOut} />
+              <Routes>
+                <Route path="/" element={<MovieSearch />} />
+                <Route path="/Watch-Next" element={<MyMovies />} />
+              </Routes>
+            </>
           )}
         </>
-
       )}
-      <br/>
+      <br />
       <AuthDetails onSignIn={handleSignIn} isAuthenticated={isAuthenticated} />
     </div>
   );

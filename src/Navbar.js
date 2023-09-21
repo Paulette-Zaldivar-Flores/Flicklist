@@ -5,7 +5,6 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import './Navbar.css';
 import logo from './images/logo.png';
-import avatar from './images/avatar.png';
 
 const MovieNavbar = () => {
 
@@ -24,9 +23,6 @@ const MovieNavbar = () => {
             <Nav.Link className="navlink" href="/Watch-Next">Watch Next</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <Navbar.Brand>
-        <img src={avatar} alt="Avatar" className="avatar" />
-        </Navbar.Brand>
       </Container>
     </Navbar>
   );
