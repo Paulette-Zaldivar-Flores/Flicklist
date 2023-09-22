@@ -91,6 +91,10 @@
   height: calc(200px * (16/9));
 }
 
+.movieposter:hover{
+box-shadow: 0 0 10px rgb(228, 9, 181);
+}
+
 .flexbox {
   display: flex;
   justify-content: center;
