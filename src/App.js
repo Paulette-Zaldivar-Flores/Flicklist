@@ -41,7 +41,7 @@ function App() {
             </>
           ) : (
             <>
-              <Navbar/>
+              <Navbar isAuthenticated={isAuthenticated} userSignOut={handleSignOut} />
               <Routes>
                 <Route path="/" element={<MovieSearch />} />
                 <Route path="/Watch-Next" element={<MyMovies />} />
