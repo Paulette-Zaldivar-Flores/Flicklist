@@ -30,7 +30,7 @@ function Comments({ movieId, comments }) {
       <div>
       <button className = "commentsbutton" onClick={createComment}> Comment <FontAwesomeIcon icon={faComments} />
           </button>
-          <input className = "commentsinput mx-5" value={comment} onChange={(e) => setComment(e.target.value)}></input>
+          <input className = "commentsinput" value={comment} onChange={(e) => setComment(e.target.value)}></input>
           </div>
           <div>
         <h5 className = "commentsLabel">Comments:</h5>

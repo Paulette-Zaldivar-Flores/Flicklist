@@ -1,5 +1,0 @@
-# Redirect requests to the root to your index.html (SPA entry point)
-/*    /index.html   200
-
-# Redirect requests to "/Watch-Next" to your index.html (SPA entry point)
-/Watch-Next/*    /index.html   200

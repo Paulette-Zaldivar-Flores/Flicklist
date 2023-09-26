@@ -39,7 +39,7 @@ h2{
 }
 
 .card{
-max-width: 80%;
+width:80%;
 background: rgba(255, 255, 255, 0.2) !important;
 border-radius: 16px !important;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
@@ -52,4 +52,16 @@ border: 1px solid rgba(255, 255, 255, 0.3) !important;
   text-align: left;
   font-size: 20px;
   padding-top: 20px;
+}
+
+
+@media (max-width: 600px) {
+  .card-text{
+    font-size: 12px;
+  }
+.card{
+  margin: 0 auto;
+  width: 100%;
+}
+
 }
