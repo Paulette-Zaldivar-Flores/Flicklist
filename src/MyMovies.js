@@ -42,14 +42,14 @@ export const MyMovies = () => {
 
   return (
     <div>
-      <h1>Saved Movies</h1>
+      <h1>Watch Next</h1>
       {savedMovies.length === 0 ? (
         <p>You haven't saved any movies yet 🎬 </p>
 
       ) : (
-        <ul>
+        <div>
           {savedMovies.map((movie) => (
-            <li key={movie.imdbID} className="movie-item">
+            <div key={movie.imdbID} className="movie-item">
               <div className="container d-flex justify-content-center p-3">
 
               <div className="card mymoviescard mb-3" >
@@ -74,9 +74,9 @@ export const MyMovies = () => {
               </div>
               </div>
 
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
 

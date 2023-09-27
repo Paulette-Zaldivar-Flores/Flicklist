@@ -11,7 +11,7 @@ const MovieNavbar = () => {
 
 
   return (
-    <Navbar className="custom-navbar me-auto" variant="light" expand="lg">
+    <Navbar className="custom-navbar me-auto" variant="dark" expand="lg">
       <Container>
         <Navbar.Brand href="/">
           <img src={logo} alt="logo" className="logo" />

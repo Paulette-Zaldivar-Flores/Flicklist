@@ -57,11 +57,18 @@ border: 1px solid rgba(255, 255, 255, 0.3) !important;
 
 @media (max-width: 600px) {
   .card-text{
-    font-size: 12px;
+    font-size: 14px;
   }
 .card{
   margin: 0 auto;
   width: 100%;
+}
+h1{
+  font-size: 45px !important;
+}
+
+p{
+  font-size: 14px;
 }
 
 }
