@@ -18,9 +18,11 @@
   width: 600px !important;
   border-radius: 3px !important;
   border: 2px solid greenyellow !important;
-
 }
 
+.modal-content p{
+  text-align: left;
+}
 @media (max-width: 600px) {
   .modal-content {
     max-width: 95%;
