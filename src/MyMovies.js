@@ -44,7 +44,7 @@ export const MyMovies = () => {
     <div>
       <h1>Watch Next</h1>
       {savedMovies.length === 0 ? (
-        <p>You haven't saved any movies yet 🎬 </p>
+        <p className = "movies-message">You haven't saved any movies yet 🎬 </p>
 
       ) : (
         <div>

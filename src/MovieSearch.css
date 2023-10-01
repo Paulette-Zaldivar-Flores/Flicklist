@@ -1,17 +1,18 @@
 .searchbar{
   border-radius: 50px;
-  padding: 5px 10px;
+  padding: 10px 20px;
   border-color:rgb(91, 27, 160);
   box-shadow: 3px 3px 10px rgba(0,0,0,1),
   -1px -1px 6px rgba(255, 255, 255, 0.4);
   margin-right: 15px;
   margin-top: 20px;
+  width: 500px
 }
 
 .searchbutton {
   --green: #b9fd1b;
   font-size: 15px;
-  padding: 10px 20px;
+  padding: 15px 25px;
   letter-spacing: 0.06em;
   position: relative;
   font-family: inherit;
@@ -99,4 +100,19 @@ box-shadow: 0 0 10px rgb(228, 9, 181);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+@media (max-width: 600px) {
+
+.searchbar{
+  width: 200px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.searchbutton{
+  padding: 10px 20px;
+}
+
 }

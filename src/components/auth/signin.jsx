@@ -22,7 +22,7 @@ const SignIn = () => {
     <div className = "Signin container">
       <img src={logo} alt = "logo" className = "loginlogo mt-5"/>
       <form onSubmit = {signIn}>
-      <h1 className = "mt-3"> Log In</h1>
+      <h1 className = "log-in"> Log In</h1>
       <input className= "signininput mx-3"
       type = "email"
       placeholder='Enter your email'

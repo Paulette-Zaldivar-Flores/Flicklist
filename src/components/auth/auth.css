@@ -155,7 +155,7 @@
 
 .loginlogo{
   width: 120px;
-  border: 2px solid #ff00fb ;
+  border: 2px solid #ff00fb;
 }
 
 .signOut{
@@ -173,10 +173,18 @@
   background-color: #232f4a;
 }
 
+.log-in{
+padding-bottom: 0px;
+}
+
+.sign-up{
+  padding-bottom: 0px;
+}
+
 @media only screen and (max-width: 600px) {
   .signOut{
     padding: 2.5px 5px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left:20px;
   }
 
@@ -185,7 +193,19 @@
   }
 
   .signininput, .input {
-    margin-top: 20px;
+    margin-top: 10px;
+  }
+
+  .log-in{
+    padding-top: 20px;
+    padding-bottom: 0px;
+    font-size: 30px;
+  }
+
+  .sign-up{
+    padding-top: 20px;
+    padding-bottom: 0px;
+    font-size: 30px;
   }
 
 }
