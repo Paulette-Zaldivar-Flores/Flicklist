@@ -72,7 +72,7 @@
 }
 
 .banner {
-  background-image: url("./images/movie-banner.jpeg");
+  background-image: url("../../images/movie-banner.jpeg");
   background-size: cover;
   background-position: center;
   height: 600px;

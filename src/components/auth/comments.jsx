@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { getDatabase, ref, push, set } from 'firebase/database';
-import './comments.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 

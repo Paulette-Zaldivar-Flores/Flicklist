@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './MyMovies.css';
-import Comments from './components/auth/comments';
+import Comments from './auth/comments';
 import { getDatabase, ref, onChildAdded } from 'firebase/database';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './MovieSearch.css';
-import './Modal.css';
 
 export const MovieSearch = () => {
   const navigate = useNavigate();

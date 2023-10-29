@@ -1,12 +1,12 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './Navbar';
+import Navbar from './components/Navbar';
 import SignIn from './components/auth/signin';
 import SignUp from './components/auth/signup';
 import AuthDetails from './components/auth/AuthDetails';
-import { MovieSearch } from './MovieSearch';
-import { MyMovies } from './MyMovies';
+import { MovieSearch } from './components/MovieSearch';
+import { MyMovies } from './components/MyMovies';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { auth } from './firebase';
 
