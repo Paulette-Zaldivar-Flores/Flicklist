@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import SignIn from './components/auth/signin';
 import SignUp from './components/auth/signup';
@@ -8,11 +8,11 @@ import AuthDetails from './components/auth/AuthDetails';
 import { MovieSearch } from './MovieSearch';
 import { MyMovies } from './MyMovies';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { auth } from './firebase';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const location = useLocation();
 
   const handleSignIn = () => {
     setIsAuthenticated(true);
@@ -23,12 +23,17 @@ function App() {
   };
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setIsAuthenticated(true);
+      } else {
+        setIsAuthenticated(false);
+      }
       setIsLoading(false);
-    }, 500);
+    });
 
-    return () => clearTimeout(timeout);
-  }, [location]);
+    return () => unsubscribe();
+  }, []);
 
   return (
     <div className="App">
