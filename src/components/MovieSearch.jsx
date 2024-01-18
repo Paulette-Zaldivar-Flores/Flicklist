@@ -78,6 +78,7 @@ export const MovieSearch = () => {
 
 
   const fetchMovies = async () => {
+    document.getElementById('loader').style.display = 'block';
     const url = `https://www.omdbapi.com/?s=${keyword}&apikey=adf1f2d7`;
 
     try {
@@ -100,13 +101,15 @@ export const MovieSearch = () => {
       setMovies(moviesWithPlot);
     } catch (error) {
       console.error('Error fetching movies:', error);
+    } finally {
+      document.getElementById('loader').style.display = 'none';
     }
   };
 
   return (
     <div>
       <div className = "banner" >
-      <h1 className="App-header">Flick Search</h1>
+      <h1 className="App-header">Flick List</h1>
       <form>
         <input
           className="searchbar"
@@ -126,6 +129,7 @@ export const MovieSearch = () => {
         </button>
       </form>
       </div>
+      <div className="loader" id="loader"></div>
       {movies.length > 0 && displayMovies()}
       {isModalOpen && selectedMovie && (
   <div className="modal-overlay">
