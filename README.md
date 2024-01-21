@@ -61,7 +61,8 @@
 ## Screenshots
 
 
-<img width="1436" alt="Screen Shot 2566-06-06 at 16 18 47" src="https://github.com/Paulette-Zaldivar-Flores/flicklist/assets/96970580/c3623b8b-9d3e-482b-abbd-7ba4305b9594">
+![flicklist](https://github.com/Paulette-Zaldivar-Flores/Flicklist/assets/96970580/bb8fa892-3ea3-4f28-8f98-1e8313fb409f)
+
 
 
 
